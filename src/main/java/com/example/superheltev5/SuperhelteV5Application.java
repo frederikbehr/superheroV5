@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SuperhelteV5Application {
 
     public static void main(String[] args) {
-        System.out.println("works");
         SpringApplication.run(SuperhelteV5Application.class, args);
     }
 
