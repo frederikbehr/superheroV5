@@ -27,8 +27,8 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
-          name: superhelteV5_war
-          path: '${{ github.workspace }}/target/superhelteV5_war.war'
+          name: app
+          path: '${{ github.workspace }}/target/*.war'
 
   deploy:
     runs-on: ubuntu-latest
@@ -41,7 +41,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:
-          name: superhelteV5_war
+          name: app
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
