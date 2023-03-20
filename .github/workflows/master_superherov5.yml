@@ -56,4 +56,4 @@ jobs:
           app-name: 'superheroV5'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FCA604671D2149C9AFD7A138C18B3710 }}
-          package: 'app.jar'
+          package: '*.jar'
