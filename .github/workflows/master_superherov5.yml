@@ -25,7 +25,10 @@ jobs:
         run: mvn clean install
         
       - name: Where Am I?
-        run: pwd
+        run: |
+          pwd
+          ls -a
+          ls ./target/app.war
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@main
