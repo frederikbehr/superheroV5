@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: app
-          path: '${{ github.workspace }}/target/*.war'
+          path: '${{ github.workspace }}/target/app.war'
 
   deploy:
     runs-on: ubuntu-latest
@@ -47,7 +47,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'superheroV5'
+          app-name: 'app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FCA604671D2149C9AFD7A138C18B3710 }}
-          package: '*.war'
+          package: 'app.war'
