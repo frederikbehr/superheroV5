@@ -28,7 +28,7 @@ jobs:
         run: |
           pwd
           ls -a
-          ls ./target/app.war
+          ls target
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@main
