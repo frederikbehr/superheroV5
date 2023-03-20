@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: superhelteV5_war
-          path: '${{ github.workspace }}/target/*.war'
+          path: '${{ github.workspace }}/target/superhelteV5_war.war'
 
   deploy:
     runs-on: ubuntu-latest
