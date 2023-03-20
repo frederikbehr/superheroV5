@@ -23,6 +23,9 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        
+      - name: Where Am I?
+        run: pwd
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@main
