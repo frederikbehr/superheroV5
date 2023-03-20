@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: app
-          path: '${{ github.workspace }}/target/app.war'
+          path: '/home/runner/work/superheroV5//target/app.war'
 
   deploy:
     runs-on: ubuntu-latest
